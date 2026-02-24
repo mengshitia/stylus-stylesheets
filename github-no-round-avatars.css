@@ -1,0 +1,17 @@
+@-moz-document regexp("https://github\\.com/.*") {
+  /* No round user avatars. */
+  :is(.avatar, .avatar-user) {
+    border-radius: unset !important;
+  }
+
+  :is([data-component="IconButton"], [data-component="Avatar"]) {
+    border-radius: unset;
+  }
+
+  /* Move away the status icon. */
+  .user-status-circle-badge-container {
+    margin-bottom: unset;
+    bottom: unset;
+    margin-top: var(--base-size-32);
+  }
+}

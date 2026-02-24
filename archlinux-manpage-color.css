@@ -1,0 +1,17 @@
+@-moz-document domain("man.archlinux.org") {
+  /* Make the dark color softer. */
+  body {
+    background-color: light-dark(rgb(220, 220, 230), rgb(35, 35, 47));
+    color: light-dark(rgb(20, 20, 20), rgb(190, 190, 190));
+  }
+}
+
+@-moz-document url-prefix("https://man.archlinux.org/man/") {
+  /* Additional color differ on some section items. */
+  section.Sh>.Sh {
+    color: rgb(148, 171, 242);
+  }
+  section.Ss>.Ss {
+    color: rgb(113, 181, 202);
+  }
+}

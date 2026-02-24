@@ -1,0 +1,44 @@
+@-moz-document regexp("https://zsh.sourceforge.io/Guide/.*"), regexp("https://zsh.sourceforge.io/Doc/.*") {
+  /* Customize styles and colors. */
+  html,
+  body {
+    background-color: rgb(16, 26, 32);
+    color: rgb(190, 190, 190);
+  }
+
+  body {
+    max-width: 768px;
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: rgb(220, 220, 220);
+  }
+
+  dt,
+  pre {
+    color: orange;
+  }
+
+  code,
+  tt {
+    color: green;
+  }
+
+  strong {
+    color: slateblue;
+  }
+
+  :link {
+    color: cyan;
+  }
+
+  :visited {
+    color: darkcyan;
+  }
+}
