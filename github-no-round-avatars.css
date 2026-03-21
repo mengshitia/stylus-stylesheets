@@ -12,6 +12,6 @@
   .user-status-circle-badge-container {
     margin-bottom: unset;
     bottom: unset;
-    margin-top: var(--base-size-32);
+    margin-top: var(--base-size-8);
   }
 }
