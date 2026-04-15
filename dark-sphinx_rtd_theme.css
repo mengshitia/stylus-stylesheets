@@ -1,0 +1,133 @@
+@-moz-document regexp("https://.*\\.readthedocs\\.io/.*"), regexp("https://.*\\.readthedocs\\.com/.*"), regexp("https://wayland.freedesktop.org/.*") {
+/* Not a perfect solution, but it works. */
+@media(prefers-color-scheme: dark) {
+	:root {
+		--bg-body: #111;
+		--bg-code: #123;
+		--bg-content: #222;
+		--bg-highlight: #202329;
+		--bg-note: #072233;
+		--bg-note-title: #073349;
+		--c-code-border: #202426;
+		--c-content: #eee;
+		--c-toc: #fff;
+	}
+	
+	#rtd-search-form input {
+		background: #fff8;
+		box-shadow: none;
+	}
+
+	.wy-menu-vertical {
+		& li.current {
+			background: #4e4a4a;
+			&>a {
+				background: var(--bg-content);
+				color: var(--c-toc);
+				&:hover {
+					background: #4e4a4a;
+				}
+			}
+			& a:hover {
+				background: #5e5a5a;
+			}
+		}
+
+		& li.toctree-l1.current>a {
+			border: none;
+		}
+
+		& li.toctree-l2 {
+			&.current {
+				&>a {
+					background: #3e3a3a;
+				}
+
+				& li.toctree-l3>a {
+					background: #2e2a2a;
+				}
+			}
+
+			& a {
+				color: var(--c-content);
+				border: none;
+			}
+		}
+	}
+
+	.wy-body-for-nav {
+		background: var(--bg-body);
+	}
+
+	.wy-nav-content {
+		background: var(--bg-content);
+		color: var(--c-content);
+	}
+
+	.highlight {
+		background: var(--bg-highlight);
+		& .nf {
+			color: #7678ce;
+		}
+
+		& .o {
+			color: var(--c-content);
+		}
+	}
+
+	button.copybtn {
+		background: var(--bg-content);
+	}
+
+	.rst-content {
+		& code {
+			background: var(--bg-code);
+			border-color: var(--c-code-border);
+		}
+
+		& div[class^="highlight"] {
+			border-color: var(--c-code-border);
+		}
+
+		& .note {
+			background: var(--bg-note);
+			& .admonition-title {
+				background: var(--bg-note-title);
+			}
+		}
+
+		& .seealso {
+			background: var(--bg-note);
+		}
+
+		& .toc-backref {
+			color: var(--c-toc);
+		}
+
+		& .warning {
+			background: #a27123;
+			& .admonition-title {
+				background: #ca9921;
+			}
+		}
+	}
+
+	/* These selectors were copied from page. */
+	html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt {
+		background: var(--bg-note);
+	}
+
+	html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) .descname,
+	html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) .sig-name {
+		color: var(--c-toc);
+	}
+}
+}
+
+@-moz-document regexp("https://wayland.freedesktop.org/.*") {
+@media(prefers-color-scheme: dark) {
+	figure {
+		background: #fff7;
+	}
+}
+}
