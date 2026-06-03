@@ -1,5 +1,7 @@
 Some custom styles for the Stylus web browser plugin.
 
+[简体中文说明](./README-zh.md)
+
 ---
 
 ## archlinux-manpage-color.css
