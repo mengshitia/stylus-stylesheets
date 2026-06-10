@@ -1,4 +1,4 @@
-@-moz-document regexp("https://.*\\.readthedocs\\.io/.*"), regexp("https://.*\\.readthedocs\\.com/.*"), regexp("https://wayland.freedesktop.org/.*") {
+@-moz-document regexp("https://.*\\.readthedocs\\.io/.*"), regexp("https://.*\\.readthedocs\\.com/.*"), regexp("https://wayland.freedesktop.org/.*"), regexp("https://libevdev.pages.freedesktop.org/udev-hid-bpf/.*"), regexp("https://seisman.github.io/how-to-write-makefile/.*") {
 /* Not a perfect solution, but it works. */
 @media(prefers-color-scheme: dark) {
 	:root {
@@ -9,14 +9,14 @@
 		--bg-note: #072233;
 		--bg-note-title: #073349;
 		--c-code-border: #202426;
-		--c-content: #eee;
+		--c-content: #ccc;
 		--c-toc: #fff;
 	}
-	
-	.wy-side-nav-search > div.switch-menus > div.version-switch select {
+
+	.wy-side-nav-search>div.switch-menus>div.version-switch select {
 		color: var(--c-content);
 	}
-	
+
 	form#rtd-search-form input {
 		background: #fff8;
 		box-shadow: none;
@@ -32,6 +32,7 @@
 					background: #4e4a4a;
 				}
 			}
+
 			& a:hover {
 				background: #5e5a5a;
 			}
@@ -70,6 +71,10 @@
 
 	.highlight {
 		background: var(--bg-highlight);
+		& .nc {
+			color: #58acf7;
+		}
+
 		& .nf {
 			color: #7678ce;
 		}
@@ -97,11 +102,18 @@
 			& :is(caption, thead) {
 				color: var(--c-toc);
 			}
+
 			&:not(.field-list) tr:nth-child(2n-1) td {
 				background: #555;
 			}
 		}
-		
+
+		& .hint {
+			& p:is(:not(.admonition-title)) {
+				color: black;
+			}
+		}
+
 		& .note {
 			background: var(--bg-note);
 			& .admonition-title {
