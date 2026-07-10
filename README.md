@@ -25,5 +25,9 @@ Square avatars in user's profile, repositories page, the top right corner and so
 ### mdn-hide-ads.css
 This stylus rule is useless if you have AD blocker plugins such as `uBlock Origin` installed. But if you don't have any AD blocker plugins, this one might help.
 
+### restore-stylus-action-button-text.css
+Since `Stylus` has changed it's text labels to icons at the top of the editor, this stylesheet is used to make that text back
+by using `::after`, see [this comment](https://github.com/openstyles/stylus/issues/2167#issuecomment-4914419195).
+
 ### zshell-doc.css
 This stylesheet was written for a user-side dark mode for zshell documentation site.
