@@ -1,0 +1,18 @@
+@-moz-document regexp("^\\w+-extension://[^/]+/edit.*") {
+  /* "https://github.com/openstyles/stylus/issues/2167#issuecomment-4914419195" */
+  section#actions {
+    a::after {
+      content: attr(title);
+    }
+
+    /* just make these buttons look similar */
+    a#testRE {
+      font: initial;
+      font-size: unset;
+      &::before {
+        font: 700 18px/1 var(--family);
+        content: ".*?";
+      }
+    }
+  }
+}
