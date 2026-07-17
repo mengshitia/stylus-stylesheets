@@ -15,8 +15,10 @@
 ### dark-sphinx_rtd_theme.css
 针对使用 `sphinx_rtd_theme` 主题的一部分网站手写了一份自己用的深色模式，因为这个主题根本没有深色模式。
 
-### github-no-round-avatars.css
+### github-tweaks.css
 GitHub 上的用户头像统统变成方的。个人主页上的状态小图标也换了个位置，避免遮挡用户头像。
+
+网页字体强制使用系统字体。
 
 ### mdn-hide-ads.css
 隐藏 MDN 文档站的横幅广告，如果已经装过反广告插件，这个样式表其实没什么用。
