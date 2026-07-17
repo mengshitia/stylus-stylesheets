@@ -14,4 +14,9 @@
     bottom: unset;
     margin-top: var(--base-size-8);
   }
+
+  /* font-family: system-ui */
+  body {
+    font-family: system-ui;
+  }
 }
